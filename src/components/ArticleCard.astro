@@ -1,0 +1,33 @@
+---
+import TagList from "./TagList.astro";
+import { formatDateShort } from "../utils/formatDate";
+import { readingTime } from "../utils/readingTime";
+
+interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  tags: string[];
+  slug: string;
+  body: string;
+}
+
+const { title, description, publishedAt, tags, slug, body } = Astro.props;
+---
+
+<a href={`/articles/${slug}`} class="group block">
+  <article class="rounded-xl border border-border bg-surface p-6 transition-all hover:border-accent/40 hover:shadow-md">
+    <div class="flex flex-wrap items-center gap-3 text-xs text-text-secondary mb-2">
+      <time datetime={publishedAt.toISOString()}>
+        {formatDateShort(publishedAt)}
+      </time>
+      <span class="text-border">&bull;</span>
+      <span>{readingTime(body)}</span>
+    </div>
+    <h3 class="text-lg font-semibold text-text group-hover:text-accent transition-colors mb-2">
+      {title}
+    </h3>
+    <p class="text-sm text-text-secondary mb-4 line-clamp-2">{description}</p>
+    <TagList tags={tags} />
+  </article>
+</a>

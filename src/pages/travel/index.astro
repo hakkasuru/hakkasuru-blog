@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import TravelMap from "../../components/TravelMap.tsx";
+import PhotoGallery from "../../components/PhotoGallery.astro";
+
+const travelEntries = await getCollection("travel");
+const sorted = travelEntries.sort(
+  (a, b) => b.data.visitedAt.getTime() - a.data.visitedAt.getTime()
+);
+
+const mapLocations = sorted.map((entry) => ({
+  title: entry.data.title,
+  location: entry.data.location,
+  country: entry.data.country,
+  coordinates: entry.data.coordinates,
+  coverImage: entry.data.coverImage,
+  slug: entry.id,
+  excerpt: entry.data.excerpt,
+}));
+
+const galleryEntries = sorted.map((entry) => ({
+  title: entry.data.title,
+  location: entry.data.location,
+  country: entry.data.country,
+  coverImage: entry.data.coverImage,
+  slug: entry.id,
+  excerpt: entry.data.excerpt,
+}));
+
+const mapboxToken = import.meta.env.PUBLIC_MAPBOX_TOKEN ?? "";
+---
+
+<PageLayout title="Travel" description="Places I've explored around the world.">
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">Travel</h1>
+
+  {mapboxToken && (
+    <div class="mb-12">
+      <TravelMap client:visible locations={mapLocations} token={mapboxToken} />
+    </div>
+  )}
+
+  <PhotoGallery entries={galleryEntries} />
+</PageLayout>

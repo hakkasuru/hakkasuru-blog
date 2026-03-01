@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const projects = await getCollection("projects");
+const sorted = projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<PageLayout title="Projects" description="Engineering projects and side builds.">
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">Projects</h1>
+  <div class="grid gap-6 sm:grid-cols-2">
+    {sorted.map((project) => (
+      <ProjectCard
+        title={project.data.title}
+        description={project.data.description}
+        tags={project.data.tags}
+        url={project.data.url}
+        repo={project.data.repo}
+        status={project.data.status}
+      />
+    ))}
+  </div>
+</PageLayout>

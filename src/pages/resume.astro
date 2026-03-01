@@ -1,0 +1,28 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+---
+
+<PageLayout title="Resume" noindex={true}>
+  <div class="mx-auto max-w-3xl">
+    <div class="flex items-center justify-between mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">Resume</h1>
+      <a
+        href="/resume.pdf"
+        download
+        class="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-dark transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        Download PDF
+      </a>
+    </div>
+    <div class="rounded-xl border border-border bg-surface overflow-hidden">
+      <iframe
+        src="/resume.pdf"
+        class="w-full h-[80vh]"
+        title="Resume"
+      ></iframe>
+    </div>
+  </div>
+</PageLayout>

@@ -1,0 +1,33 @@
+---
+import SEOHead from "../components/SEOHead.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  type?: "website" | "article";
+  publishedAt?: Date;
+}
+
+const { title, description, ogImage, noindex, type, publishedAt } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEOHead
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      noindex={noindex}
+      type={type}
+      publishedAt={publishedAt}
+    />
+  </head>
+  <body class="min-h-screen bg-bg text-text antialiased">
+    <slot />
+  </body>
+</html>

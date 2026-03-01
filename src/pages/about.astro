@@ -1,0 +1,39 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+---
+
+<PageLayout title="About" description="About Anders Soh — engineer, security enthusiast, and traveler.">
+  <div class="mx-auto max-w-3xl">
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">About</h1>
+
+    <div class="prose prose-stone max-w-none">
+      <p>
+        Hi, I'm <strong>Anders Soh</strong> — a software engineer with a passion for security, systems programming, and building useful things.
+      </p>
+
+      <h2>What I Do</h2>
+      <p>
+        I spend my time writing code, participating in CTF competitions, and exploring new places. This blog is where I document what I learn and build along the way.
+      </p>
+
+      <h2>Interests</h2>
+      <ul>
+        <li>Systems engineering & infrastructure</li>
+        <li>Security research & CTF challenges</li>
+        <li>Web development & developer tooling</li>
+        <li>Travel & photography</li>
+      </ul>
+
+      <h2>Tech Stack</h2>
+      <p>
+        I work across a range of technologies including TypeScript, Python, Go, and Rust. I enjoy building with frameworks like Astro, React, and Next.js, and deploying on platforms like Vercel and AWS.
+      </p>
+    </div>
+
+    <div class="mt-10 pt-8 border-t border-border">
+      <h3 class="text-sm font-semibold text-text-secondary uppercase tracking-wider mb-4">Find me online</h3>
+      <SocialLinks />
+    </div>
+  </div>
+</PageLayout>

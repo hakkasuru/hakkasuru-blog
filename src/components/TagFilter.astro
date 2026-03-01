@@ -1,0 +1,35 @@
+---
+interface Props {
+  tags: string[];
+  activeTag?: string;
+}
+
+const { tags, activeTag } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2 mb-8">
+  <a
+    href="/articles"
+    class:list={[
+      "rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
+      !activeTag
+        ? "bg-accent text-white"
+        : "bg-stone-100 text-text-secondary hover:bg-stone-200",
+    ]}
+  >
+    All
+  </a>
+  {tags.map((tag) => (
+    <a
+      href={`/articles/tags/${tag}`}
+      class:list={[
+        "rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
+        activeTag === tag
+          ? "bg-accent text-white"
+          : "bg-stone-100 text-text-secondary hover:bg-stone-200",
+      ]}
+    >
+      {tag}
+    </a>
+  ))}
+</div>

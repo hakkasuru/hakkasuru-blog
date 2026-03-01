@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import ArticleCard from "../../components/ArticleCard.astro";
+import TagFilter from "../../components/TagFilter.astro";
+
+const articles = await getCollection("articles");
+const published = articles
+  .filter((a) => !a.data.draft)
+  .sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+
+const allTags = [...new Set(published.flatMap((a) => a.data.tags))].sort();
+---
+
+<PageLayout title="Articles" description="Technical articles, CTF writeups, and engineering notes.">
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8">Articles</h1>
+  <TagFilter tags={allTags} />
+  <div class="grid gap-6">
+    {published.map((article) => (
+      <ArticleCard
+        title={article.data.title}
+        description={article.data.description}
+        publishedAt={article.data.publishedAt}
+        tags={article.data.tags}
+        slug={article.id}
+        body={article.body ?? ""}
+      />
+    ))}
+  </div>
+</PageLayout>

@@ -1,0 +1,32 @@
+---
+title: "Hello World: Building This Blog"
+description: "A walkthrough of how I built this blog using Astro, Tailwind CSS, and deployed it on Vercel."
+publishedAt: 2024-12-01
+tags: ["astro", "webdev", "tailwind"]
+category: "Engineering"
+featured: true
+draft: false
+---
+
+Welcome to my blog! This is the first post where I walk through the tech stack and decisions behind building this site.
+
+## The Stack
+
+- **Astro 5** for static site generation with islands architecture
+- **Tailwind CSS v4** for utility-first styling
+- **MDX** for rich content authoring
+- **Vercel** for deployment
+
+## Why Astro?
+
+Astro's content-first approach was perfect for a blog. It ships zero JavaScript by default and lets me add interactivity only where needed — like the travel map.
+
+```typescript
+// Example: fetching articles
+const articles = await getCollection("articles");
+const published = articles.filter((a) => !a.data.draft);
+```
+
+## What's Next
+
+I'll be writing about engineering projects, CTF writeups, and travel experiences. Stay tuned!

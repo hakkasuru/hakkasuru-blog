@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = await getCollection("projects");
+const featured = projects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+{featured.length > 0 && (
+  <section class="py-12">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-2xl font-bold tracking-tight">Featured Projects</h2>
+      <a href="/projects" class="text-sm font-medium text-accent hover:text-accent-dark transition-colors">
+        View all &rarr;
+      </a>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {featured.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          tags={project.data.tags}
+          url={project.data.url}
+          repo={project.data.repo}
+          status={project.data.status}
+        />
+      ))}
+    </div>
+  </section>
+)}
