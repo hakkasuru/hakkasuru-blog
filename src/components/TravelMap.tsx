@@ -31,7 +31,13 @@ export default function TravelMap({ locations, token }: Props) {
       style: "mapbox://styles/mapbox/light-v11",
       center: [105, 20],
       zoom: 2,
+      attributionControl: false,
     });
+
+    map.current.addControl(
+      new mapboxgl.AttributionControl({ compact: true }),
+      "bottom-left"
+    );
 
     map.current.addControl(new mapboxgl.NavigationControl(), "top-right");
 
