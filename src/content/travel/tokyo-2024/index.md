@@ -6,6 +6,14 @@ coordinates:
   lat: 35.6762
   lng: 139.6503
 visitedAt: 2024-10-15
+coverImage: "https://picsum.photos/seed/tokyo-cover/800/400"
+gallery:
+  - "https://picsum.photos/seed/tokyo-shibuya/600/400"
+  - "https://picsum.photos/seed/tokyo-tsukiji/600/400"
+  - "https://picsum.photos/seed/tokyo-akihabara/600/400"
+  - "https://picsum.photos/seed/tokyo-meiji/600/400"
+  - "https://picsum.photos/seed/tokyo-shinjuku/600/400"
+  - "https://picsum.photos/seed/tokyo-temple/600/400"
 excerpt: "Exploring the vibrant streets of Tokyo — from Shibuya crossing to hidden ramen shops in Shinjuku."
 ---
 
