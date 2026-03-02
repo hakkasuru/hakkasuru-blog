@@ -8,8 +8,8 @@ export const SITE = {
 } as const;
 
 export const SOCIAL = {
-  github: "https://github.com/anderssoh",
-  gitlab: "https://gitlab.com/anderssoh",
+  github: "https://github.com/hakkasuru",
+  gitlab: "https://gitlab.com/hakkasuru",
   linkedin: "https://linkedin.com/in/anderssoh",
 } as const;
 
