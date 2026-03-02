@@ -47,12 +47,34 @@ const { Content } = await render(entry);
         <h2 class="text-xl font-bold mb-6">Photos</h2>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {entry.data.gallery.map((photo: string, i: number) => (
-            <img
-              src={photo}
-              alt={`${entry.data.title} photo ${i + 1}`}
-              class="w-full h-48 object-cover rounded-lg"
-            />
+            <button
+              type="button"
+              class="cursor-zoom-in overflow-hidden rounded-lg"
+              data-lightbox-src={photo}
+              aria-label={`View ${entry.data.title} photo ${i + 1} full size`}
+            >
+              <img
+                src={photo}
+                alt={`${entry.data.title} photo ${i + 1}`}
+                class="w-full h-48 object-cover transition-transform hover:scale-105"
+              />
+            </button>
           ))}
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
+          <button
+            id="lightbox-close"
+            type="button"
+            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors cursor-pointer"
+            aria-label="Close"
+          >
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <img id="lightbox-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] rounded-lg object-contain" />
         </div>
       </div>
     )}
@@ -64,3 +86,32 @@ const { Content } = await render(entry);
     </div>
   </article>
 </PageLayout>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img") as HTMLImageElement;
+
+  document.querySelectorAll<HTMLButtonElement>("[data-lightbox-src]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.dataset.lightboxSrc!;
+      lightboxImg.src = src;
+      lightboxImg.alt = btn.getAttribute("aria-label") ?? "";
+      lightbox?.classList.remove("hidden");
+      lightbox?.classList.add("flex");
+    });
+  });
+
+  function closeLightbox() {
+    lightbox?.classList.add("hidden");
+    lightbox?.classList.remove("flex");
+    lightboxImg.src = "";
+  }
+
+  document.getElementById("lightbox-close")?.addEventListener("click", closeLightbox);
+  lightbox?.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
+</script>
