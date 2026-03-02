@@ -31,6 +31,10 @@ Defined in `src/content.config.ts` using Astro's glob loader:
 
 Tailwind CSS v4 via `@tailwindcss/vite` plugin. Custom theme tokens defined in `src/styles/global.css` under `@theme` — accent color is `#f97316` (orange), surfaces use stone palette. Light mode only. Fonts: Inter (body), JetBrains Mono (code).
 
+### Git
+
+- Each commit should only contain changes related to each other. Split unrelated changes into separate commits.
+
 ### Key Conventions
 
 - Site metadata, social URLs, and nav links live in `src/utils/constants.ts`
