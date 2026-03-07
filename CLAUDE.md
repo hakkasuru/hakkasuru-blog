@@ -43,6 +43,19 @@ Key frontmatter fields (defined in `src/content.config.ts`):
 
 - Each commit should only contain changes related to each other. Split unrelated changes into separate commits.
 
+### Images
+
+Travel photos live in `public/images/travel/<destination>/` and are referenced as absolute paths in frontmatter.
+
+To optimize images (resize to 1920px max width, quality 80) using the built-in macOS `sips` tool:
+
+```bash
+cd public/images/travel/<destination>
+for f in *.jpeg *.jpg; do sips --resampleWidth 1920 -s formatOptions 80 "$f" > /dev/null 2>&1; done
+```
+
+Create a backup before optimizing if the user wants the option to revert: `cp -r <dir> <dir>-backup`
+
 ### Key Conventions
 
 - Site metadata, social URLs, and nav links live in `src/utils/constants.ts`
