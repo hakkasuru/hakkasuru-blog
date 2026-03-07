@@ -8,18 +8,22 @@ featured: true
 draft: false
 ---
 
-Welcome to my blog! This is the first post where I walk through the tech stack and decisions behind building this site.
+Welcome — really glad you found your way here. Every blog needs a first post, and rather than writing some abstract mission statement, I thought the most honest thing I could do was show you what this place is made of: the tech stack, the decisions behind it, and what I'm hoping to share with you going forward.
 
 ## The Stack
+
+Here's what's running under the hood:
 
 - **Astro 5** for static site generation with islands architecture
 - **Tailwind CSS v4** for utility-first styling
 - **MDX** for rich content authoring
 - **Vercel** for deployment
 
+Nothing exotic, but every choice was deliberate. I wanted something I'd actually enjoy writing in, and something that would get out of my way when I just needed to publish a post.
+
 ## Why Astro?
 
-Astro's content-first approach was perfect for a blog. It ships zero JavaScript by default and lets me add interactivity only where needed — like the travel map.
+I'd been watching Astro for a while before committing to it. What finally won me over is its content-first philosophy — it ships zero JavaScript by default, which keeps pages fast without any extra effort on my part. When I do need interactivity (like the travel map you'll find elsewhere on the site), I can drop in a component and tell Astro exactly when to hydrate it. That granular control feels right.
 
 ```typescript
 // Example: fetching articles
@@ -27,6 +31,16 @@ const articles = await getCollection("articles");
 const published = articles.filter((a) => !a.data.draft);
 ```
 
+That snippet is essentially how the article listing page works. Dead simple, and it stays fast because there's no client-side data fetching involved.
+
+Tailwind v4 handles the styling, and MDX means I can write in familiar Markdown while still pulling in components when a post calls for something richer. Vercel wraps it all up with a deployment pipeline that's been essentially invisible — which is exactly what you want from infrastructure.
+
+## What You'll Find Here
+
+This blog is split across two threads: engineering projects and travel experiences. On the engineering side, I'll write about things I'm actually building — the tradeoffs I ran into, what worked, what didn't. On the travel side, I'll share stories from wherever I happen to end up, with a bit more honesty than the typical travel post.
+
+Both threads matter to me, and I think they're more connected than they might seem at first. Building things and exploring places share the same underlying impulse — curiosity about how the world fits together.
+
 ## What's Next
 
-I'll be writing about engineering projects, CTF writeups, and travel experiences. Stay tuned!
+There's a lot I'm looking forward to writing. If any of this sounds like something you'd want to read, stick around. I'm glad to have you here.
