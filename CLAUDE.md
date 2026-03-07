@@ -36,7 +36,7 @@ Tailwind CSS v4 via `@tailwindcss/vite` plugin. Custom theme tokens defined in `
 Key frontmatter fields (defined in `src/content.config.ts`):
 
 - **articles**: `title`, `description`, `publishedAt` (date), `tags[]`, `category?`, `featured?`, `draft?`, `ogImage?`
-- **projects**: `title`, `description`, `tags[]`, `url?`, `repo?`, `featured?`, `order` (number for sort), `status` (`active`|`archived`|`wip`) — omit `repo` if the repository is private or closed source
+- **projects**: `title`, `description`, `tags[]`, `url?`, `repo?`, `featured?`, `order` (number for sort), `status` (`active`|`archived`|`wip`) — omit `repo` if the repository is private or closed source; always ask the user whether a new project should be featured before creating the file
 - **travel**: `title`, `location`, `country`, `coordinates` (`{lat, lng}`), `visitedAt` (date), `coverImage?`, `gallery[]`, `excerpt`
 
 ### Git
