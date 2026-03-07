@@ -10,13 +10,14 @@ coordinates:
     lng: 102.8329
     label: "Kunming"
 visitedAt: 2026-01-10
-coverImage: "/images/travel/yunnan-cycling/cover-erhai-lake.jpeg"
+coverImage: "/images/travel/yunnan-cycling/dali-sign.jpeg"
 gallery:
   - "/images/travel/yunnan-cycling/dianchi-greenway-brompton.jpg"
   - "/images/travel/yunnan-cycling/erhai-group-ride.jpeg"
   - "/images/travel/yunnan-cycling/dali-lakeside-cafe.jpeg"
   - "/images/travel/yunnan-cycling/dali-sign.jpeg"
   - "/images/travel/yunnan-cycling/dianchi-greenway-forest.jpeg"
+  - "/images/travel/yunnan-cycling/dianchi-greenway-bridge.jpeg"
   - "/images/travel/yunnan-cycling/bromptons-parked.jpeg"
 excerpt: "Four days, two lakes, and one folding bike through the best cycling in southwest China — Erhai Lake in Dali and the unexpectedly brilliant Dianchi Greenway in Kunming."
 ---
@@ -31,9 +32,9 @@ January turned out to be a fine time to visit. The air was crisp and clear, the 
 
 At one point the group stopped at a lakeside cafe with a floor-to-ceiling window looking straight out onto the promenade and the water beyond. It was the kind of unplanned break that ends up being the thing you remember most — sitting at the bar counter with a warm drink, watching other cyclists coast past in the sun while the mountains sat still in the background.
 
-Dali itself is well-worn by tourism, but the lake perimeter feels genuinely local. Roadside signs in Chinese only, small restaurants with plastic stools, a red signpost near the southern shore that reads "我在大理很想你" — "I miss you so much in Dali" — which doubles as both a photo spot and an accidental summary of how most people feel when they leave.
+Dali itself is well-worn by tourism, but the lake perimeter feels genuinely local. Roadside signs in Chinese only, cafes and restaurants of every kind lining the water, a red signpost near the southern shore that reads "我在大理很想你" — "I miss you so much in Dali" — which doubles as both a photo spot and an accidental summary of how most people feel when they leave.
 
-Two nights wasn't quite enough.
+Dali has a way of making itself feel like somewhere you already know. By the second morning it had stopped feeling like a place I was visiting.
 
 ## Kunming and the Dianchi Greenway
 
@@ -47,7 +48,7 @@ I'd gone in expecting Dali to be the cycling highlight. Kunming quietly disagree
 
 ## Riding a Brompton in Yunnan
 
-Bringing a folding bike rather than renting locally was the right call. The Brompton handled both lake routes without complaint, and the ability to fold it and take it into a cafe or a restaurant without any conversation was genuinely useful. On the Dianchi Greenway especially, where the path sometimes narrowed and the surface changed, a nimble bike felt right.
+The Brompton handled both lake routes without complaint, and the ability to fold it and take it into a cafe or a restaurant without any conversation was genuinely useful. On the Dianchi Greenway especially, where the path sometimes narrowed and the surface changed, a nimble bike felt right.
 
 The small wheels draw attention in China — several locals stopped to ask about it, and at one rest point the group ended up in a long, sign-language-heavy conversation with a man who was convinced the Brompton must be very expensive (he was not entirely wrong).
 
