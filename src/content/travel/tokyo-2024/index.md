@@ -3,8 +3,9 @@ title: "Tokyo, Japan"
 location: "Tokyo"
 country: "Japan"
 coordinates:
-  lat: 35.6762
-  lng: 139.6503
+  - lat: 35.6762
+    lng: 139.6503
+    label: "Tokyo"
 visitedAt: 2024-10-15
 coverImage: "https://picsum.photos/seed/tokyo-cover/1200/600"
 gallery:

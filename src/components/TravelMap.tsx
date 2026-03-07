@@ -6,7 +6,7 @@ interface TravelLocation {
   title: string;
   location: string;
   country: string;
-  coordinates: { lat: number; lng: number };
+  coordinates: { lat: number; lng: number; label?: string }[];
   coverImage?: string;
   slug: string;
   excerpt: string;
@@ -55,19 +55,21 @@ export default function TravelMap({ locations, token }: Props) {
         </div>
       `;
 
-      const el = document.createElement("div");
-      el.style.width = "24px";
-      el.style.height = "24px";
-      el.style.borderRadius = "50%";
-      el.style.backgroundColor = "#f97316";
-      el.style.border = "3px solid white";
-      el.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
-      el.style.cursor = "pointer";
+      for (const coord of loc.coordinates) {
+        const el = document.createElement("div");
+        el.style.width = "24px";
+        el.style.height = "24px";
+        el.style.borderRadius = "50%";
+        el.style.backgroundColor = "#f97316";
+        el.style.border = "3px solid white";
+        el.style.boxShadow = "0 2px 6px rgba(0,0,0,0.2)";
+        el.style.cursor = "pointer";
 
-      new mapboxgl.Marker(el)
-        .setLngLat([loc.coordinates.lng, loc.coordinates.lat])
-        .setPopup(new mapboxgl.Popup({ offset: 15 }).setHTML(popupContent))
-        .addTo(map.current);
+        new mapboxgl.Marker(el)
+          .setLngLat([coord.lng, coord.lat])
+          .setPopup(new mapboxgl.Popup({ offset: 15 }).setHTML(popupContent))
+          .addTo(map.current!);
+      }
     }
 
     return () => {

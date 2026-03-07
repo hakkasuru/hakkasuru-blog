@@ -36,10 +36,13 @@ const travel = defineCollection({
     title: z.string(),
     location: z.string(),
     country: z.string(),
-    coordinates: z.object({
-      lat: z.number(),
-      lng: z.number(),
-    }),
+    coordinates: z.array(
+      z.object({
+        lat: z.number(),
+        lng: z.number(),
+        label: z.string().optional(),
+      })
+    ).min(1),
     visitedAt: z.coerce.date(),
     coverImage: z.string().optional(),
     gallery: z.array(z.string()).default([]),

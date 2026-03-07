@@ -3,8 +3,12 @@ title: "Cycling Yunnan: Erhai Lake and the Dianchi Greenway"
 location: "Yunnan"
 country: "China"
 coordinates:
-  lat: 25.6065
-  lng: 100.2676
+  - lat: 25.6065
+    lng: 100.2676
+    label: "Dali"
+  - lat: 24.8801
+    lng: 102.8329
+    label: "Kunming"
 visitedAt: 2026-01-10
 coverImage: "/images/travel/yunnan-cycling/cover-erhai-lake.jpeg"
 gallery:
