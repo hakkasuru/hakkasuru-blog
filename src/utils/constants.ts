@@ -1,7 +1,7 @@
 export const SITE = {
   title: "Anders Soh",
   description:
-    "Engineering, CTF writeups, and travel — personal blog of Anders Soh.",
+    "Engineering and travel — personal blog of Anders Soh.",
   url: "https://hakkasuru.me",
   author: "Anders Soh",
   ogImage: "/og-default.png",
