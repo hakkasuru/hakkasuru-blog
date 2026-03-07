@@ -34,6 +34,10 @@ export default function TravelMap({ locations, token }: Props) {
       attributionControl: false,
     });
 
+    map.current.on("load", () => {
+      map.current?.resize();
+    });
+
     map.current.addControl(
       new mapboxgl.AttributionControl({ compact: true }),
       "bottom-left"
