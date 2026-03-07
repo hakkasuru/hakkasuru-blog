@@ -29,7 +29,15 @@ Defined in `src/content.config.ts` using Astro's glob loader:
 
 ### Styling
 
-Tailwind CSS v4 via `@tailwindcss/vite` plugin. Custom theme tokens defined in `src/styles/global.css` under `@theme` — accent color is `#f97316` (orange), surfaces use stone palette. Light mode only. Fonts: Inter (body), JetBrains Mono (code).
+Tailwind CSS v4 via `@tailwindcss/vite` plugin. Custom theme tokens defined in `src/styles/global.css` under `@theme` — accent color is `#f97316` (orange), surfaces use stone palette. Light mode only. Fonts: Inter (body), JetBrains Mono (code). The `@tailwindcss/typography` plugin is loaded via `@plugin` in `global.css` and customised in the same file under `.prose`.
+
+### Content Schemas
+
+Key frontmatter fields (defined in `src/content.config.ts`):
+
+- **articles**: `title`, `description`, `publishedAt` (date), `tags[]`, `category?`, `featured?`, `draft?`, `ogImage?`
+- **projects**: `title`, `description`, `tags[]`, `url?`, `repo?`, `featured?`, `order` (number for sort), `status` (`active`|`archived`|`wip`)
+- **travel**: `title`, `location`, `country`, `coordinates` (`{lat, lng}`), `visitedAt` (date), `coverImage?`, `gallery[]`, `excerpt`
 
 ### Git
 
@@ -39,5 +47,6 @@ Tailwind CSS v4 via `@tailwindcss/vite` plugin. Custom theme tokens defined in `
 
 - Site metadata, social URLs, and nav links live in `src/utils/constants.ts`
 - The `/resume` page is intentionally excluded from navigation, sitemap, and indexing (`noindex`)
-- The travel map requires `PUBLIC_MAPBOX_TOKEN` env var; the map gracefully hides when the token is absent
+- The travel map requires `PUBLIC_MAPBOX_TOKEN` env var; when absent, a placeholder is shown instead
 - Articles support draft filtering — drafts are excluded from listings, RSS, and static path generation
+- The `article-planner-writer` agent (`.claude/agents/article-planner-writer.md`) handles planning, drafting, and editing blog articles
