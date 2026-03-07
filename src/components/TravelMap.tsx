@@ -74,7 +74,7 @@ export default function TravelMap({ locations, token }: Props) {
   return (
     <div
       ref={mapContainer}
-      style={{ width: "100%", height: "500px", borderRadius: "12px" }}
+      style={{ width: "100%", height: "350px", borderRadius: "12px" }}
     />
   );
 }
