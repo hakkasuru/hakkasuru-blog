@@ -8,12 +8,14 @@ interface Props {
   description?: string;
   ogImage?: string;
   noindex?: boolean;
+  type?: "website" | "article";
+  publishedAt?: Date;
 }
 
-const { title, description, ogImage, noindex } = Astro.props;
+const { title, description, ogImage, noindex, type, publishedAt } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} ogImage={ogImage} noindex={noindex}>
+<BaseLayout title={title} description={description} ogImage={ogImage} noindex={noindex} type={type} publishedAt={publishedAt}>
   <div class="flex min-h-screen flex-col">
     <Header />
     <main class="flex-1 mx-auto w-full max-w-5xl px-6 py-12">

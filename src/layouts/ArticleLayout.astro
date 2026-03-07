@@ -16,7 +16,7 @@ interface Props {
 const { title, description, publishedAt, tags, ogImage, body } = Astro.props;
 ---
 
-<PageLayout title={title} description={description} ogImage={ogImage}>
+<PageLayout title={title} description={description} ogImage={ogImage} type="article" publishedAt={publishedAt}>
   <article class="mx-auto max-w-3xl">
     <header class="mb-10">
       <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-text mb-4">
@@ -36,12 +36,3 @@ const { title, description, publishedAt, tags, ogImage, body } = Astro.props;
     </div>
   </article>
 </PageLayout>
-
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: title,
-  description,
-  datePublished: publishedAt.toISOString(),
-  author: { "@type": "Person", name: "Anders Soh" },
-})} />
