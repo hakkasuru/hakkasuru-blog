@@ -13,7 +13,7 @@ No linter or test runner is configured.
 
 ## Architecture
 
-Astro 5 static site deployed on Vercel. All pages are pre-rendered at build time. React is used only for the TravelMap island component (`client:visible`).
+Astro 5 static site deployed on Vercel. All pages are pre-rendered at build time. React is used only for the TravelMap island component (`client:load`).
 
 ### Content Collections
 
@@ -37,7 +37,7 @@ Key frontmatter fields (defined in `src/content.config.ts`):
 
 - **articles**: `title`, `description`, `publishedAt` (date), `tags[]`, `category?`, `featured?`, `draft?`, `ogImage?`
 - **projects**: `title`, `description`, `tags[]`, `url?`, `repo?`, `featured?`, `order` (number for sort), `status` (`active`|`archived`|`wip`) — omit `repo` if the repository is private or closed source; always ask the user whether a new project should be featured before creating the file
-- **travel**: `title`, `location`, `country`, `coordinates` (`{lat, lng}`), `visitedAt` (date), `coverImage?`, `gallery[]`, `excerpt`
+- **travel**: `title`, `location`, `country`, `coordinates` (array of `{lat, lng, label?}`, min 1 — supports multiple map pins per entry), `visitedAt` (date), `coverImage?`, `gallery[]`, `excerpt`
 
 ### Git
 
