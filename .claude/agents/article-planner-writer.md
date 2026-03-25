@@ -25,7 +25,6 @@ description: "A concise 1–2 sentence summary for SEO and previews."
 pubDate: YYYY-MM-DD
 updatedDate: YYYY-MM-DD  # optional, only if editing an existing post
 draft: false             # set true if the piece isn't ready to publish
-featured: false          # set true to highlight on the homepage
 tags: ["tag1", "tag2"]
 category: "Category Name"
 ---
