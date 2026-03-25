@@ -1,7 +1,7 @@
 ---
 title: "When AI can execute, what does it mean to be an engineer?"
 description: "AI is getting very good at writing code. That's prompting me to think honestly about where the real value in engineering work actually lives."
-publishedAt: 2026-03-22
+publishedAt: 2026-03-25
 tags: ["ai", "engineering", "career", "software-development"]
 category: "Engineering"
 draft: false
