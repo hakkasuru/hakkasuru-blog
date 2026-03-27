@@ -4,7 +4,7 @@ description: "What's actually happening when AI-assisted development works well 
 publishedAt: 2026-03-26
 tags: ["ai", "engineering", "context-engineering", "productivity", "taste"]
 category: "Engineering"
-draft: false
+draft: true
 ---
 
 For a while now I've been using AI heavily across work and personal projects, and building a system around it. Instruction files, skills markdown, taste guardrails, feedback loops, and now evaluation frameworks.
