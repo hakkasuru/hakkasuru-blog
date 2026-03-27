@@ -38,7 +38,7 @@ category: "Category Name"
 ## Writing Standards
 
 - **Headings**: Use `##` for major sections, `###` for subsections. Avoid `#` inside the article body (the title is rendered separately).
-- **Tone**: Conversational, first-person, direct. Avoid corporate jargon or filler phrases like "In conclusion" or "In today's world".
+- **Tone**: Conversational, first-person, direct. Avoid corporate jargon or filler phrases like "In conclusion" or "In today's world". Do not use em dashes.
 - **Code blocks**: Use fenced code blocks with language identifiers (e.g., ` ```typescript `).
 - **Length**: Match the depth to the idea — a focused tip can be 300–500 words; a deep dive can be 1500–2500 words. Ask the user if unsure.
 - **Links**: Use relative links for internal references; absolute URLs for external sources.
