@@ -4,10 +4,10 @@ description: "What's actually happening when AI-assisted development works well 
 publishedAt: 2026-03-26
 tags: ["ai", "engineering", "context-engineering", "productivity", "taste"]
 category: "Engineering"
-draft: true
+draft: false
 ---
 
-I've been using AI heavily for a while now: at work for production code, debugging, and testing automation; personally for self-reflection, side projects, writing, research, and personal branding. I've also been building a system around how I use it: instruction files, skills markdown, taste guardrails, feedback loops, and now evaluation frameworks.
+For a while now I've been using AI heavily across work and personal projects, and building a system around it. Instruction files, skills markdown, taste guardrails, feedback loops, and now evaluation frameworks.
 
 The question I kept sitting with: is this vibe coding, or is it something else?
 
@@ -47,4 +47,4 @@ The system I've built works because I have opinions worth encoding. The trap is 
 
 The question isn't just *are my guardrails tight?*
 
-It's: is my taste still moving?
+Is my taste still moving?
