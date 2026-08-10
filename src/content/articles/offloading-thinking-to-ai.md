@@ -4,7 +4,7 @@ description: "Offloading thinking to AI isn't lazy, it's how humans have always 
 publishedAt: 2026-08-10
 tags: ["ai", "critical-thinking", "productivity", "judgment"]
 category: "Engineering"
-draft: true
+draft: false
 ---
 
 I offload an enormous amount of thinking to AI. First drafts of emails I don't want to write from scratch. Research sweeps across a topic I'm unfamiliar with. Summaries of documents I don't have time to read fully. Rough analysis I refine rather than originate. I do this constantly, across nearly everything I work on, and I think you should too.
